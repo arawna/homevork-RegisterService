@@ -51,6 +51,10 @@ public class UserManager implements UserService {
 
 	@Override
 	public void verifyUser(User user) {
+		if(userDao.getUserById(user.getId())==null) {
+			System.out.println("Böyle bir kullanýcý yok doðrulama yapamazsiniz");
+			return;
+		}
 		userDao.verifyUser(user);
 		System.out.println(user.getFirstName()+" "+user.getLastName()+" Mailiniz onaylandý kaydýnýz aktif edildi");
 	}
