@@ -20,7 +20,7 @@ public class Main {
 		StandartRegister standartRegister=new StandartRegister(userDao, verificationService);
 		GoogleRegister googleRegister=new GoogleRegister(userDao, verificationService);
 		UserService userService=new UserManager(userDao,verificationService);
-		User user1=new User(1,"Ali","Hocaoglu","alihocaoglu34@hotmail.com","123");
+		User user1=new User(1,"Ali","Hocaoglu","alihocaoglu34@hotmail.com","123456");
 		User user2=new User(2,"Tolga","Tok","tolgatok@hotmail.com","987654");
 		userService.register(user1,standartRegister);
 		userService.verifyUser(user1);
